@@ -1,20 +1,7 @@
 #-*-coding:GBK -*-
 # -*- coding: utf-8 -*-
 """
-By Fei Wang, Jan 2022
-Contact: WangFei_m@outlook.com
-This code implements the ghost imaging reconstruction using deep neural network constraint (GIDC) algorithm
-reported in the paper: 
-Fei Wang et al. 'Far-field super-resolution ghost imaging with adeep neural network constraint'. Light Sci Appl 11, 1 (2022).  
-https://doi.org/10.1038/s41377-021-00680-w
-Please cite our paper if you find this code offers any help.
 
-Inputs:
-A_real: illumination patterns (pixels * pixels * pattern numbers)
-y_real: single pixel measurements (pattern numbers)
-
-Outputs:
-x_out: reconstructed image by GIDC (pixels * pixels)
 """
 import torch
 import numpy as np
@@ -68,11 +55,11 @@ for i in range(size):
 
 #        file_ext = os.path.splitext(file)
 #        front, ext = file_ext
-        #print(front)  #获取图片名字前缀
-        #print(ext)  # 获取图片后缀
+        #print(front)  #鑾峰彇鍥剧墖鍚嶅瓧鍓嶇紑
+        #print(ext)  # 鑾峰彇鍥剧墖鍚庣紑
 
         img = Image.open(filelist[i])
-        #保存为.npy
+        #淇濆瓨涓�.npy
         res = np.array(img, dtype='uint16')
         res = np.expand_dims(res, 0)
         res1 = torch.FloatTensor(res/1.0)
