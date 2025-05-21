@@ -1,23 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-By Fei Wang, Jan 1, 2022
-Contact: WangFei_m@outlook.com
-This code implements the DNN structure and measurements process of GIDC algorithm reported in the paper: 
-Fei Wang et al. 'Far-field super-resolution ghost imaging with adeep neural network constraint'. Light Sci Appl 11, 1 (2022).  
-https://doi.org/10.1038/s41377-021-00680-w
-Please cite our paper if you find this code offers any help.
 
-Inputs:
-inpt: DGI results (batch_size * pixels * pixels * 1)
-real_A: illumination patterns (batch_size * pixels * pixels * num_patterns)
-batch_size: batch_size
-img_W: width of image
-img_H: high of image
-num_A: num_patterns
-
-Outputs:
-out_x: estimated image by GIDC (batch_size * pixels * pixels * 1)
-out_y: estimated intensity measurements associated with out_x and real_A (batch_size * 1 * 1 * num_patterns)
 """
 # Unet
 import tensorflow.compat.v1 as tf
