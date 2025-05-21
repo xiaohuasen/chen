@@ -39,8 +39,8 @@ while (i < len(context)):
 mat = np.array(data)
 
 size = 1500
-#src_dir =  '/home/magic/chenyifan/data/BesselM1J-50-s100-1/'
-src_dir =  '/home/magic/chenyifan/data/080/'
+#src_dir =  'path'
+src_dir =  'path'
 
 date = list()
 
